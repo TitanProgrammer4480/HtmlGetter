@@ -13,7 +13,7 @@ with st.form(key="req_html"):
   url = st.text_input(label="Url:")
   h = st.text_input(label="Header:") 
   if h != "":
-    header = {"User-Agent:" h}
+    header = {"User-Agent": h}
   submit = st.form_submit_button(label="Submit")
   if submit:
     st.session_state.html = requests.get(url, headers=header).text
